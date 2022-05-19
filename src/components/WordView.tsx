@@ -9,16 +9,11 @@ const WordWrap = styled.div`
   align-items: middle;
   border-bottom: none;
   > span {
+    color : #0e2526;
     display: inline-block;
     width: 50%;
     padding: 10px;
     text-align: left;
-    & + span {
-      border-left: 1px solid #0e2526;
-    }
-  }
-  & + & {
-    border-top: 1px solid #0e2526;
   }
 `
 

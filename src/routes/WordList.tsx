@@ -17,14 +17,14 @@ const WordWrapHeader = styled.div`
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  border-bottom: 1px solid #0e2526;
   > span {
+    color:#0e2526;
     display: inline-block;
     width: 50%;
-    padding: 5px 10px;
+    padding: 15px;
     text-align: center;
+    background:rgba(238,238,238,0.5);
     & + span {
-      border-left: 1px solid #0e2526;
     }
   }
 `

@@ -10,8 +10,8 @@ const ButtonStyle = styled.button`
     background:#fff;
     padding:5px 10px; 
     border-radius:5px;
-    height:30px; 
-    line-height:1;
+    height:50px; 
+    line-height:1.2;
     &:active {border:1px solid green; box-sizing:border-box;}
     margin: 0 10px;
   `
@@ -34,8 +34,9 @@ export default function QuizSessionView(state: State, onClick: (selected: string
     const buttonWrapStyle={
       display:'flex',
       justifyContent:'center',
-      margin:'0 auto'
-
+      margin:'0 auto',
+      fontSize: '12px',
+      
     }
     // console.log(quiz)
     // quize=> text, answer, index, selections
@@ -68,14 +69,19 @@ export default function QuizSessionView(state: State, onClick: (selected: string
     )
   }
 
-  const currentQuiz = state.quizList[state.currentIndex]
+  const currentQuiz = state.quizList[state.currentIndex];
+  const resultBox = {
+    lineHeight:1.5, 
+    fontSize:'18px'
+  }
   if(state.isCompleted){
     localStorage.setItem('correct',String(state.correctCount));
     localStorage.setItem('inCorrect',String(state.inCorrectCount));
   }
+
   return (
-    <section>
-      <div>완료 여부: {state.isCompleted ? '완료' : '미완료'}</div>
+    <section style={resultBox}>
+      <div>완료 여부 : {state.isCompleted ? '완료' : '미완료'}</div>
       <div>맞은 개수 {state.correctCount}</div>
       <div>틀린 개수 {state.inCorrectCount}</div>
       {state.isCompleted ? <HomeBtn /> : QuizView(currentQuiz)}
