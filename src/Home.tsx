@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -11,6 +12,9 @@ function Home() {
       </Link>
       <Link to='/quiz' style={linkStyle}>
         퀴즈 보기
+      </Link>
+      <Link to='/result' style={linkStyle}>
+        퀴즈 결과 보기
       </Link>
     </>
   )
