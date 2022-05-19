@@ -11,14 +11,6 @@ type Quiz = {
   selections: string[] // 보기 목록 (정답 포함), 2지 선다
 }
 
-type QuizResult = {
-  quizIndex: number
-  createdAt: Date
-  answer: string // 정답
-  selected: string // 선택한 답
-  isCorrect: boolean // 정답여부
-}
-
 type State = {
   isCompleted: boolean // computed
   correctCount: number // computed
@@ -27,6 +19,15 @@ type State = {
   quizList: Quiz[]
   quizResults: QuizResult[]
 }
+
+type QuizResult = {
+  quizIndex: number
+  createdAt: Date
+  answer: string // 정답
+  selected: string // 선택한 답
+  isCorrect: boolean // 정답여부
+}
+
 
 // Action
 
